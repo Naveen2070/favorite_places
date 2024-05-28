@@ -6,12 +6,12 @@ import 'package:favorite_places/screens/places.dart';
 
 final colorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 0, 183, 255),
-  surface: const Color.fromARGB(255, 0, 38, 255),
+  seedColor: const Color.fromARGB(255, 2, 177, 247),
+  surface: const Color.fromARGB(255, 0, 85, 165),
 );
 
 final theme = ThemeData().copyWith(
-  scaffoldBackgroundColor: colorScheme.surface,
+  scaffoldBackgroundColor: colorScheme.onPrimary,
   colorScheme: colorScheme,
   textTheme: GoogleFonts.ubuntuCondensedTextTheme().copyWith(
     titleSmall: GoogleFonts.ubuntuCondensed(
@@ -38,7 +38,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My spots',
+      debugShowCheckedModeBanner: false,
+      title: 'Great Places',
       theme: theme,
       home: const PlacesScreen(),
     );
